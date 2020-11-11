@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+            box-sizing: border-box;
+            }
+
+            /* Create three equal columns that floats next to each other */
+            .column1 {
+            float: left;
+            width: 30%;
+            padding: 10px;
+            }
+            .column2{
+            float: left;
+            width: 70%;
+            padding: 10px; 
+            }
+
+            /* Clear floats after the columns */
+            .row:after {
+            content: "";
+            display: table;
+            clear: both;
+            }
+         </style>
+    </head>
+<body>
+<h1><b>Hertz Car Rental</b></h1>
+
+
+<form action="/action_page.php">
+<div class="row">
+    <div class="column1" >
+        <label for="name">Full Name:</label><br><br>
+        <label for="pnum">Passport Number</label><br><br>
+        <label for="age">Age:</label><br><br>
+        <label for="type">Type of car:</label><br><br>
+        <label for="pickup">Pickup Date:</label><br><br>
+    </div>
+    <div class="column2">
+        <input type="text" id="name" name="name"><br><br>
+        <input type="number" id="pnum" name="pnum"><br><br>
+        <select name="age" id="age">
+            <option value="1829">18 - 29</option>
+            <option value="3069">30 - 69</option>
+            <option value="70">70+</option>
+        </select><br><br>
+        <input type="radio" id="sedan" name="type" value="sedan">
+        <label for="sedan">Sedan.jpg (RM150/day)</label>   
+        <input type="radio" id="suv" name="type" value="suv">
+        <label for="suv">SUV.jpg (RM250/day)</label><br><br>
+        <input type="date" id="pickup" name="pickup"><br><br>
+        
+    </div>
+</div>
+</form>
+
+
+<br>
+<input type="submit" value="Submit">
+<input type="reset" value="clear">
+</body>
+</html>
