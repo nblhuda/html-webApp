@@ -1,103 +1,96 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            h1 {text-align: center;}
-            * {
-            box-sizing: border-box;
-            }
+    <body>
+        <fieldset>
+            <h1 style="text-align:center;"><b>Rizalman Boutique</b></h1>
+            
+            <form action="/action_page.php">
+                <fieldset>
+                    <legend>CUSTOMER INFO</legend>
+                    <table>
+                        <tr>
+                            <td>Customer Name</td>
+                            <td><input type="text" id="name" name="name"></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td><input type="text" id="address" name="address"></td>
+                        </tr>
+                        <tr>
+                            <td>Contact Number</td>
+                            <td><input type="tel" id="number" name="number"></td>
+                        </tr>
+                    </table>
+                
+                </fieldset>
+            </form>
 
-            /* Create three equal columns that floats next to each other */
-            .column1 {
-            float: left;
-            width: 30%;
-            padding: 10px;
-            }
-            .column2{
-            float: left;
-            width: 70%;
-            padding: 10px; 
-            }
+        <form action="/action_page.php">
+            <fieldset>
+                <legend>ORDER DETAILS</legend>
+                <table>
+                    <tr>
+                        <td>Date Send</td>
+                        <td><input type="date" id="dsend" name="dsend"></td>
+                    </tr>
+                    <tr>
+                        <td>Date Ready</td>
+                        <td><input type="date" id="dready" name="dready"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Type of Baju</b></td>
+                        <td><b>Quantity</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox">Baju Kurung</td>
+                        <td><input type="number" id="kurung" name="kurung"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox">Baju Kebaya</td>
+                        <td><input type="number" id="kebaya" name="kebaya"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox">Baju Melayu Teluk Belanga</td>
+                        <td><input type="number" id="belanga" name="belanga"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox">Baju Melayu Cekak Musang</td>
+                        <td><input type="number" id="cekakmusang" name="cekakmusang"></td>
+                    </tr>
+                </table>
+            
+            </fieldset>
+        </form>
 
-            /* Clear floats after the columns */
-            .row:after {
-            content: "";
-            display: table;
-            clear: both;
-            }
-         </style>
-    </head>
-<body>
-    <fieldset>
-<h1><b>Rizalman Boutique</b></h1>
-
-<form action="/action_page.php">
- <fieldset>
-  <legend>CUSTOMER INFO</legend>
-  <label for="name">Customer Name</label>
-  <input type="text" id="name" name="name"><br><br>
-  <label for="address">Address</label>
-  <input type="text" id="address" name="address"><br><br>
-  <label for="number">Contact Number</label>
-  <input type="tel" id="number" name="number"><br><br>
- </fieldset>
-</form>
-
-<form action="/action_page.php">
-    <fieldset>
-     <legend>ORDER DETAILS</legend>
-<div class="row">
-    <div class="column1" >
-        <label for="dsend">Date Send</label><br><br>
-        <label for="dready">Date Ready</label><br><br>
-        <label><b>Type of Baju</b></label><br><br>
-        <input type="checkbox" id="baju1" name="baju1" value="kurung">
-        <label for="baju1"> Baju Kurung</label><br><br>
-        <input type="checkbox" id="baju2" name="baju2" value="kebaya">
-        <label for="baju2"> Baju Kebaya</label><br><br>
-        <input type="checkbox" id="baju3" name="baju3" value="belanga">
-        <label for="baju3"> Baju Melayu Teluk Belanga</label><br><br>
-        <input type="checkbox" id="baju4" name="baju4" value="cekakmusang">
-        <label for="baju4"> Baju Melayu Cekak Musang</label><br><br>
-
-    </div>
-    <div class="column2">
-        <input type="date" id="dsend" name="dsend"><br><br>
-        <input type="date" id="dready" name="dready"><br><br>
-        <label><b>Quantity</b></label><br><br>
-        <input type="number" id="kurung" name="kurung"><br><br>
-        <input type="number" id="kebaya" name="kebaya"><br><br>
-        <input type="number" id="belanga" name="belanga"><br><br>
-        <input type="number" id="cekakmusang" name="cekakmusang"><br><br>
-    </div>
-</div>
-</fieldset>
-</form>
-
-<form action="/action_page.php">
-    <fieldset>
-     <legend>PAYMENT DETAILS</legend>
-<div class="row">
-    <div class="column1" >
-        <label for="amount">Total Amount</label><br><br>
-        <label for="depo">Deposit</label><br><br><br>
-        <label for="balance">Balance</label>
-    </div>
-    <div class="column2">
-        <input type="number" id="amount" name="amount"><br><br>
-        <input type="radio" id="yes" name="depo" value="yes">
-        <label for="yes">Yes Deposit Amount: RM</label>   
-         <input type="number" id="depo" name="depo" ><br>
-        <input type="radio" id="no" name="depo" value="no">
-        <label for="no">No</label><br><br>
-        <input type="number" id="balance" name="balance">
-    </div>
-</div>
-</fieldset>
-</form>
-<br>
-<input type="submit" value="Submit">
-<input type="reset" value="clear">
- </fieldset>
-</body>
+        <form action="/action_page.php">
+            <fieldset>
+                <legend>PAYMENT DETAILS</legend>
+                <table>
+                    <tr>
+                        <td>Total Amount</td>
+                        <td><input type="number" id="amount" name="amount"></td>
+                    </tr>
+                    <tr>
+                        <td>Deposit</td>
+                        <td>
+                            <input type="radio" id="yes" name="depo" value="yes">
+                            <label for="yes">Yes</label>
+                                Deposit Amount: RM<input type="number" id="depo" name="depo" ><br>
+                            <input type="radio" id="no" name="depo" value="no">
+                            <label for="no">No</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Balance</td>
+                        <td> <input type="number" id="balance" name="balance"></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="clear">
+    </fieldset>
+    </body>
 </html>
